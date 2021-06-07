@@ -32,6 +32,7 @@ namespace WyprawaNa8kPremium
                 else
                 {
                     binaryGap = Math.Max(binaryGap,sum);
+                    sum = 0;
                 }
             }
             return binaryGap;
