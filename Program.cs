@@ -11,6 +11,29 @@ namespace WyprawaNa8kPremium
             Console.WriteLine(BinaryGap(64));
         }
 
+        static int BinaryGap1(int number)
+        {
+            int tymczas = 0;
+            int wynik = 0;
+            string b = Convert.ToString(number, 2);
+            for (int i = 0; i < b.Length; i++)
+            {
+                if (b[i] == '0')
+                {
+                    tymczas++;
+                }
+                else
+                {
+                    if (wynik <= tymczas)
+                    {
+                        wynik = tymczas;
+                    }
+                    tymczas = 0;
+                }
+            }
+            return wynik;
+        }  
+
         static int BinaryGap(int number)
         {
             var sum = 0;
@@ -20,7 +43,7 @@ namespace WyprawaNa8kPremium
             {
                 if (binary[i].Equals('0'))
                 {
-                    sum = i == binary.Length - 1 ? 0 : sum + 1;
+                    sum++;
                 }
                 else
                 {
