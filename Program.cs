@@ -6,6 +6,7 @@ namespace WyprawaNa8kPremium
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(BinaryGap(8768));
             Console.WriteLine(BinaryGap(1054));
             Console.WriteLine(BinaryGap(100));
             Console.WriteLine(BinaryGap(64));
