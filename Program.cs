@@ -15,7 +15,7 @@ namespace WyprawaNa8kPremium
         {
             int result = 0;
             int binaryGap = 0;
-            var binary = Convert.ToString(number, 2);
+            var binary = Convert.ToString(number,2);
             for(int i = 0; i < binary.Length; i++)
             {
                 if (binary[i..(i + 1)].Equals("0"))
