@@ -13,8 +13,8 @@ namespace WyprawaNa8kPremium
 
         static int BinaryGap(int number)
         {
-            int sum = 0;
-            int binaryGap = 0;
+            var sum = 0;
+            var binaryGap = 0;
             var binary = Convert.ToString(number,2);
             for(int i = 0; i < binary.Length; i++)
             {
