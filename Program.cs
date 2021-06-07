@@ -13,25 +13,25 @@ namespace WyprawaNa8kPremium
 
         static int BinaryGap(int number)
         {
-            int result = 0;
+            int sum = 0;
             int binaryGap = 0;
             var binary = Convert.ToString(number,2);
             for(int i = 0; i < binary.Length; i++)
             {
-                if (binary[i..(i + 1)].Equals("0"))
+                if (binary[i].Equals('0'))
                 {
                     if(i == binary.Length - 1)
                     {
-                        result = 0;
+                        sum = 0;
                     }
                     else
                     {
-                        result++;
+                        sum++;
                     }
                 }
                 else
                 {
-                    binaryGap = Math.Max(binaryGap,result);
+                    binaryGap = Math.Max(binaryGap,sum);
                 }
             }
             return binaryGap;
