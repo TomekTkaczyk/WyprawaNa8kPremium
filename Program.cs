@@ -20,14 +20,7 @@ namespace WyprawaNa8kPremium
             {
                 if (binary[i].Equals('0'))
                 {
-                    if(i == binary.Length - 1)
-                    {
-                        sum = 0;
-                    }
-                    else
-                    {
-                        sum++;
-                    }
+                    sum = i == binary.Length - 1 ? 0 : sum + 1;
                 }
                 else
                 {
