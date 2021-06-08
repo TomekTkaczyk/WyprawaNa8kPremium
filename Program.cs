@@ -59,19 +59,17 @@ namespace WyprawaNa8kPremium
         {
             var binaryGap = 0;
             var binary = Convert.ToString(number, 2);
-            var regex = new Regex("10+");
-            var result = regex.Matches(binary);
-            var count = (result.Count > 0 && (number & 1) == 0) ? result.Count - 1 : result.Count;
+            var result = Regex.Matches(binary,"0+1");
 
-            for(var i = 0; i < count; i++)
+            for(var i = 0; i < result.Count; i++)
             {
-                if (result[i].Length - 1 > binaryGap)
+                if (result[i].Length > binaryGap)
                 {
-                    binaryGap = result[i].Length - 1;
+                    binaryGap = result[i].Length;
                 }
             }
 
-            return binaryGap;
+            return binaryGap > 1 ? binaryGap - 1 : 0;
         }
     }
 }
