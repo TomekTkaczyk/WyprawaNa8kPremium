@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace WyprawaNa8kPremium
@@ -7,9 +8,10 @@ namespace WyprawaNa8kPremium
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(BinaryGap3(1054));
-            Console.WriteLine(BinaryGap3(100));
-            Console.WriteLine(BinaryGap3(64));
+            Console.WriteLine(BinaryGap3b(18592));
+            Console.WriteLine(BinaryGap3b(1054));
+            Console.WriteLine(BinaryGap3b(100));
+            Console.WriteLine(BinaryGap3b(64));
         }
 
         static int BinaryGap1(int number)
@@ -55,7 +57,7 @@ namespace WyprawaNa8kPremium
             return binaryGap;
         }
 
-        static int BinaryGap3(int number)
+        static int BinaryGap3a(int number)
         {
             var binaryGap = 0;
             var binary = Convert.ToString(number, 2);
@@ -70,6 +72,15 @@ namespace WyprawaNa8kPremium
             }
 
             return binaryGap > 1 ? binaryGap - 1 : 0;
+        }
+
+
+        static int BinaryGap3b(int number)
+        {
+            var binary = Convert.ToString(number, 2);
+            var matches = Regex.Matches(binary, "0+1");
+
+            return matches.Count > 0 ? matches.Select(x => x.Value.Length).ToArray().Max() - 1 : 0;
         }
     }
 }
