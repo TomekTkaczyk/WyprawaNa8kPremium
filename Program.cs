@@ -14,36 +14,13 @@ namespace WyprawaNa8kPremium
 
         private static void Task02_JewelsAndStones()
         {
-            Console.WriteLine(CountJewelsInStones01("aA", "BBBabAAbbb"));
-            Console.WriteLine(CountJewelsInStones01("Z", "ZZ"));
-            Console.WriteLine(CountJewelsInStones01("z", "ZZ"));
+            Console.WriteLine(JewelsStones.CountJewelsInStones01("aA", "BBBabAAbbb"));
+            Console.WriteLine(JewelsStones.CountJewelsInStones01("Z", "ZZ"));
+            Console.WriteLine(JewelsStones.CountJewelsInStones01("z", "ZZ"));
 
-            Console.WriteLine(CountJewelsInStones02("aA", "BBBabAAbbb"));
-            Console.WriteLine(CountJewelsInStones02("Z", "ZZ"));
-            Console.WriteLine(CountJewelsInStones02("z", "ZZ"));
-
-            // brute force
-            static int CountJewelsInStones01(string jewels, string stones) 
-            {
-                int count = 0;
-                for(int i = 0; i < stones.Length; i++)
-                {
-                    if (jewels.Contains(stones[i]))
-                    {
-                        count++;
-                    }
-                }
-            
-                return count;
-            }
-
-            // LINQ
-            static int CountJewelsInStones02(string jewels, string stones)
-            {
-                return stones.Where(x => jewels.Contains(x)).Count();
-            }
-
-
+            Console.WriteLine(JewelsStones.CountJewelsInStones02("aA", "BBBabAAbbb"));
+            Console.WriteLine(JewelsStones.CountJewelsInStones02("Z", "ZZ"));
+            Console.WriteLine(JewelsStones.CountJewelsInStones02("z", "ZZ"));
         }
 
         static void Task01_BinaryGap()
