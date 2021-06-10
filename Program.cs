@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace WyprawaNa8kPremium
 {
@@ -8,79 +8,50 @@ namespace WyprawaNa8kPremium
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(BinaryGap3b(18592));
-            Console.WriteLine(BinaryGap3b(1054));
-            Console.WriteLine(BinaryGap3b(100));
-            Console.WriteLine(BinaryGap3b(64));
+            Task02_JewelsAndStones();
+            //Task01_BinaryGap();
         }
 
-        static int BinaryGap1(int number)
+        private static void Task02_JewelsAndStones()
         {
-            var sum = 0;
-            var binaryGap = 0;
-            var binary = Convert.ToString(number,2);
-            for(int i = 0; i < binary.Length; i++)
-            {
-                if (binary[i].Equals('0'))
-                {
-                    sum++;
-                }
-                else
-                {
-                    binaryGap = Math.Max(binaryGap,sum);
-                    sum = 0;
-                }
-            }
-            return binaryGap;
-        }
+            Console.WriteLine(CountJewelsInStones01("aA", "BBBabAAbbb"));
+            Console.WriteLine(CountJewelsInStones01("Z", "ZZ"));
+            Console.WriteLine(CountJewelsInStones01("z", "ZZ"));
 
-        static int BinaryGap2(int number)
-        {
-            var sum = 0;
-            var binaryGap = 0;
-            var binary = Convert.ToString(number, 2);
-            for (int i = 0; i < binary.Length; i++)
+            Console.WriteLine(CountJewelsInStones02("aA", "BBBabAAbbb"));
+            Console.WriteLine(CountJewelsInStones02("Z", "ZZ"));
+            Console.WriteLine(CountJewelsInStones02("z", "ZZ"));
+
+            // brute force
+            static int CountJewelsInStones01(string jewels, string stones) 
             {
-                if (binary[i].Equals('0'))
+                int count = 0;
+                for(int i = 0; i < stones.Length; i++)
                 {
-                    sum++;
-                }
-                else
-                {
-                    if(sum > binaryGap)
+                    if (jewels.Contains(stones[i]))
                     {
-                        binaryGap = sum;
+                        count++;
                     }
-                    sum = 0;
                 }
+            
+                return count;
             }
-            return binaryGap;
-        }
 
-        static int BinaryGap3a(int number)
-        {
-            var binaryGap = 0;
-            var binary = Convert.ToString(number, 2);
-            var result = Regex.Matches(binary,"0+1");
-
-            for(var i = 0; i < result.Count; i++)
+            // LINQ
+            static int CountJewelsInStones02(string jewels, string stones)
             {
-                if (result[i].Length > binaryGap)
-                {
-                    binaryGap = result[i].Length;
-                }
+                return stones.Where(x => jewels.Contains(x)).Count();
             }
 
-            return binaryGap > 1 ? binaryGap - 1 : 0;
+
         }
 
-
-        static int BinaryGap3b(int number)
+        static void Task01_BinaryGap()
         {
-            var binary = Convert.ToString(number, 2);
-            var matches = Regex.Matches(binary, "0+1");
-
-            return matches.Count > 0 ? matches.Select(x => x.Value.Length).ToArray().Max() - 1 : 0;
+            Console.WriteLine(BinaryGap.BinaryGap3b(18592));
+            Console.WriteLine(BinaryGap.BinaryGap3b(1054));
+            Console.WriteLine(BinaryGap.BinaryGap3b(100));
+            Console.WriteLine(BinaryGap.BinaryGap3b(64));
         }
     }
 }
