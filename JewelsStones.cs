@@ -24,5 +24,15 @@ namespace WyprawaNa8kPremium
         {
             return stones.Where(x => jewels.Contains(x)).Count();
         }
+
+        // LINQ Queries
+        public static int CountJewelsInStones03(string jewels, string stones)
+        {
+            return (from s in stones
+                    group s by s into stone
+                    where jewels.Contains(stone.Key)
+                    select stone.Count()
+                    ).Sum();
+        }
     }
 }

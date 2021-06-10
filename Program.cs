@@ -21,6 +21,14 @@ namespace WyprawaNa8kPremium
             Console.WriteLine(JewelsStones.CountJewelsInStones02("aA", "BBBabAAbbb"));
             Console.WriteLine(JewelsStones.CountJewelsInStones02("Z", "ZZ"));
             Console.WriteLine(JewelsStones.CountJewelsInStones02("z", "ZZ"));
+
+            Console.WriteLine(JewelsStones.CountJewelsInStones03("aA", "BBBabAAbbb"));
+            Console.WriteLine(JewelsStones.CountJewelsInStones03("Z", "ZZ"));
+            Console.WriteLine(JewelsStones.CountJewelsInStones03("z", "ZZ"));
+
+            Console.WriteLine(JewelsStones.CountJewelsInStones03("aA", "BBBabAAbbb"));
+            Console.WriteLine(JewelsStones.CountJewelsInStones03("Z", "ZZ"));
+            Console.WriteLine(JewelsStones.CountJewelsInStones03("z", "ZZ"));
         }
 
         static void Task01_BinaryGap()
