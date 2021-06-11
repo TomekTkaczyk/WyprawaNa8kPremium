@@ -14,21 +14,25 @@ namespace WyprawaNa8kPremium
 
         private static void Task02_JewelsAndStones()
         {
-            Console.WriteLine(JewelsStones.CountJewelsInStones01("aA", "BBBabAAbbb"));
-            Console.WriteLine(JewelsStones.CountJewelsInStones01("Z", "ZZ"));
-            Console.WriteLine(JewelsStones.CountJewelsInStones01("z", "ZZ"));
+            //Console.WriteLine(JewelsStones.CountJewelsInStones01("aA", "BBBabAAbbb"));
+            //Console.WriteLine(JewelsStones.CountJewelsInStones01("Z", "ZZ"));
+            //Console.WriteLine(JewelsStones.CountJewelsInStones01("z", "ZZ"));
 
-            Console.WriteLine(JewelsStones.CountJewelsInStones02("aA", "BBBabAAbbb"));
-            Console.WriteLine(JewelsStones.CountJewelsInStones02("Z", "ZZ"));
-            Console.WriteLine(JewelsStones.CountJewelsInStones02("z", "ZZ"));
+            //Console.WriteLine(JewelsStones.CountJewelsInStones02("aA", "BBBabAAbbb"));
+            //Console.WriteLine(JewelsStones.CountJewelsInStones02("Z", "ZZ"));
+            //Console.WriteLine(JewelsStones.CountJewelsInStones02("z", "ZZ"));
 
-            Console.WriteLine(JewelsStones.CountJewelsInStones03("aA", "BBBabAAbbb"));
-            Console.WriteLine(JewelsStones.CountJewelsInStones03("Z", "ZZ"));
-            Console.WriteLine(JewelsStones.CountJewelsInStones03("z", "ZZ"));
+            //Console.WriteLine(JewelsStones.CountJewelsInStones03("aA", "BBBabAAbbb"));
+            //Console.WriteLine(JewelsStones.CountJewelsInStones03("Z", "ZZ"));
+            //Console.WriteLine(JewelsStones.CountJewelsInStones03("z", "ZZ"));
 
-            Console.WriteLine(JewelsStones.CountJewelsInStones03("aA", "BBBabAAbbb"));
-            Console.WriteLine(JewelsStones.CountJewelsInStones03("Z", "ZZ"));
-            Console.WriteLine(JewelsStones.CountJewelsInStones03("z", "ZZ"));
+            //Console.WriteLine(JewelsStones.CountJewelsInStones03("aA", "BBBabAAbbb"));
+            //Console.WriteLine(JewelsStones.CountJewelsInStones03("Z", "ZZ"));
+            //Console.WriteLine(JewelsStones.CountJewelsInStones03("z", "ZZ"));
+
+            Console.WriteLine(JewelsStones.CountJewelsInStones04("aA", "BBBabAAbbb"));
+            Console.WriteLine(JewelsStones.CountJewelsInStones04("Z", "ZZ"));
+            Console.WriteLine(JewelsStones.CountJewelsInStones04("z", "ZZ"));
         }
 
         static void Task01_BinaryGap()
