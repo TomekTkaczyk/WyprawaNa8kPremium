@@ -11,7 +11,8 @@ namespace WyprawaNa8kPremium
             {
                 throw new ArgumentOutOfRangeException("sentence", "Sentence exceeds 1000 characters");
             }
-            return sentence.ToLower().ToHashSet().Where(x => x > 60 && x < 123).Count() == 26;
+            return sentence.ToLower().ToHashSet().Where(x => x > 96 && x < 123).Count() == 26;
+
         }
     }
 }

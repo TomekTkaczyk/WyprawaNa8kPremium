@@ -12,6 +12,8 @@ namespace WyprawaNa8kPremium
         private static void Task03_Pangram()
         {
             Console.WriteLine(Pangram.IsPangram01("The quick brown fox jumps over the lazy dog"));
+            Console.WriteLine(Pangram.IsPangram01("The quick brown fox jumps over the lazy dog. 123 ółśćżźć"));
+            Console.WriteLine(Pangram.IsPangram01("The quick brown fox jumps over the l_zy dog. 123 ółśćżźć"));
             Console.WriteLine(Pangram.IsPangram01("I am programmer"));
         }
 
