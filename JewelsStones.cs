@@ -37,10 +37,10 @@ namespace WyprawaNa8kPremium
                     ).Sum();
         }
 
-        // ToHasSet
+        // ToHashSet
         public static int CountJewelsInStones04(string jewels, string stones)
         {
-            Dictionary<char,int> stoneHash = stones.ToHashSet().ToDictionary(y => y, y => 0);
+            Dictionary<char, int> stoneHash = stones.ToHashSet().ToDictionary(y => y, y => 0);
             stones.ToList().ForEach(x => stoneHash[x]++);
 
             return jewels.ToList().Where(x => stoneHash.ContainsKey(x)).Select(x => stoneHash[x]).Sum();

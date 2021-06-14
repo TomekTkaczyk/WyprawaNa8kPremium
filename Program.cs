@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace WyprawaNa8kPremium
 {
@@ -8,8 +6,13 @@ namespace WyprawaNa8kPremium
     {
         static void Main(string[] args)
         {
-            Task02_JewelsAndStones();
-            //Task01_BinaryGap();
+            Task03_Pangram();
+        }
+
+        private static void Task03_Pangram()
+        {
+            Console.WriteLine(Pangram.IsPangram01("The quick brown fox jumps over the lazy dog"));
+            Console.WriteLine(Pangram.IsPangram01("I am programmer"));
         }
 
         private static void Task02_JewelsAndStones()
