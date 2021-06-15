@@ -7,12 +7,11 @@ namespace WyprawaNa8kPremium
     {
         public static bool IsPangram01(string sentence)
         {
-            if(sentence.Length > 1000)
-            {
-                throw new ArgumentOutOfRangeException("sentence", "Sentence exceeds 1000 characters");
-            }
-            return sentence.ToLower().ToHashSet().Where(x => x > 96 && x < 123).Count() == 26;
+            int maxLengthSentence = 1000;
 
+            return sentence.Length > maxLengthSentence ?
+                throw new ArgumentOutOfRangeException("sentence", "Sentence exceeds 1000 characters") :
+                sentence.ToLower().ToHashSet().Where(x => x >= 'a' && x <= 'z').Count() == ('z'-'a' + 1);
         }
     }
 }
