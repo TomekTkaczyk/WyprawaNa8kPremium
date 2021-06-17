@@ -16,12 +16,8 @@ namespace WyprawaNa8kPremium
             {
                 throw new ArgumentOutOfRangeException("The tree is too small.");
             }
-            if (tree == null)
-            {
-                throw new ArgumentNullException();
-            }
 
-            _tree = tree;
+            _tree = tree ?? throw new ArgumentNullException();
         }          
 
         public int LovestLevelLeafsSumValue()
