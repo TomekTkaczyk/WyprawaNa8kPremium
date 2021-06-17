@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace WyprawaNa8kPremium
 {
-    public class JewelsStones
+    public class JewelsStone
     {
         // brute force
         public static int CountJewelsInStones01(string jewels, string stones)
