@@ -1,4 +1,6 @@
-﻿namespace WyprawaNa8kPremium
+﻿using System;
+
+namespace WyprawaNa8kPremium
 {
     public class TreeWithLeafs
     {
@@ -6,6 +8,19 @@
 
         public TreeWithLeafs(int?[] tree)
         {
+            if(tree.Length > (10000))
+            {
+                throw new ArgumentOutOfRangeException("The tree is too big.");
+            }
+            if (tree.Length < 1 )
+            {
+                throw new ArgumentOutOfRangeException("The tree is too small.");
+            }
+            if (tree == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             _tree = tree;
         }          
 
@@ -26,6 +41,10 @@
                     }
                     else
                     {
+                        if(_tree[pointer].Value > 100)
+                        {
+                            throw new ArgumentOutOfRangeException("The node value is too large.");
+                        }
                         sum += _tree[pointer].Value;
                     }
                     if( ++pointer == _tree.Length)

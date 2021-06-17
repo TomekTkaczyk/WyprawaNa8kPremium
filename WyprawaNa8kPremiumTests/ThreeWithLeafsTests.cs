@@ -1,4 +1,5 @@
-﻿using WyprawaNa8kPremium;
+﻿using System;
+using WyprawaNa8kPremium;
 using Xunit;
 
 namespace WyprawaNa8kPremiumTests
@@ -15,6 +16,25 @@ namespace WyprawaNa8kPremiumTests
             var result = tree.LovestLevelLeafsSumValue();
 
             Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void When_value_of_node_is_large_than_100_shuld_by_throw_exception()
+        {
+
+            int?[] arr = { 101 };
+            var tree = new TreeWithLeafs(arr);
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => tree.LovestLevelLeafsSumValue());
+        }
+
+        [Fact]
+        public void When_size_of_tree_is_large_than_10000_shuld_by_throw_exception()
+        {
+
+            int?[] arr = new int?[10001];
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => new TreeWithLeafs(arr));
         }
     }
 }
