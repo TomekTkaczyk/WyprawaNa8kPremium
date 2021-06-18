@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace WyprawaNa8kPremium
 {
@@ -10,7 +11,7 @@ namespace WyprawaNa8kPremium
         {
             if(tree.Length > (10000))
             {
-                throw new ArgumentOutOfRangeException("The tree is too big.");
+                throw new ArgumentOutOfRangeException("The tree is too large.");
             }
             if (tree.Length < 1 )
             {
@@ -20,7 +21,7 @@ namespace WyprawaNa8kPremium
             _tree = tree ?? throw new ArgumentNullException();
         }          
 
-        public int LovestLevelLeafsSumValue()
+        public int LovestLevelLeafsSummary()
         {
             var countLeafsOnLevel = 1;
             var countLeafsOnNextLevel = countLeafsOnLevel * 2;
@@ -39,7 +40,7 @@ namespace WyprawaNa8kPremium
                     {
                         if(_tree[pointer].Value > 100)
                         {
-                            throw new ArgumentOutOfRangeException("The node value is too large.");
+                            throw new ArgumentOutOfRangeException("The node value is too big.");
                         }
                         sum += _tree[pointer].Value;
                     }
