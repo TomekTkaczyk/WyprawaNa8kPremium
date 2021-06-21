@@ -68,6 +68,7 @@ namespace WyprawaNa8kPremiumTests
         [InlineData(19, 10, 15, 3, 7)]
         [InlineData(7, 10, 15, 3, 7)]
         [InlineData(-3, 10, -15, 13, 7)]
+        [InlineData(-4, 10, -2, -2, 2, 6, 8)]
 
         public void IsSumExist03_should_by_return_false(int sum, params int[] numbers)
         {

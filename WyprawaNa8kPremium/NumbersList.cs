@@ -52,13 +52,15 @@ namespace WyprawaNa8kPremium
         // With preorder and SetHashSet
         public bool IsSumExist03(List<int> numbers, int k)
         {
-            numbers.Sort();
             if (k % 2 == 0)
             {
                 var i = numbers.IndexOf(k / 2);
-                if((i > -1) && (numbers[i] == numbers[i+1]))
+                if((i > -1))
                 {
-                    return true;
+                    if(numbers.IndexOf(k / 2, i + 1) > -1)
+                    {
+                        return true;
+                    }
                 }
             }
             var hashSetNumbers = numbers.ToHashSet().ToList();
