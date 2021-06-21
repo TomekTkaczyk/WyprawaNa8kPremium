@@ -49,7 +49,7 @@ namespace WyprawaNa8kPremium
             return false;
         }
 
-        // With preorder and LINQ
+        // With preorder and SetHashSet
         public bool IsSumExist03(List<int> numbers, int k)
         {
             numbers.Sort();
