@@ -11,6 +11,7 @@ namespace WyprawaNa8kPremiumTests
         [Theory]
         [InlineData(17, 10, 15, 3, 7)]
         [InlineData(18, 10, 15, 3, 7)]
+        [InlineData(-2, 10, -15, 13, 7)]
         public void IsSumExist01_should_by_return_true(int sum, params int[] numbers)
         {
             var numbersList = new NumbersList();
@@ -21,6 +22,7 @@ namespace WyprawaNa8kPremiumTests
         [Theory]
         [InlineData(19, 10, 15, 3, 7)]
         [InlineData(7, 10, 15, 3, 7)]
+        [InlineData(-3, 10, -15, 13, 7)]
         public void IsSumExist01_should_by_return_false(int sum, params int[] numbers)
         {
             sum = -20;
@@ -32,6 +34,7 @@ namespace WyprawaNa8kPremiumTests
         [Theory]
         [InlineData(17, 10, 15, 3, 7)]
         [InlineData(18, 10, 15, 3, 7)]
+        [InlineData(-2, 10, -15, 13, 7)]
         public void IsSumExist02_should_by_return_true(int sum, params int[] numbers)
         {
             var numbersList = new NumbersList();
@@ -42,7 +45,7 @@ namespace WyprawaNa8kPremiumTests
         [Theory]
         [InlineData(19, 10, 15, 3, 7)]
         [InlineData(7, 10, 15, 3, 7)]
-
+        [InlineData(-3, 10, -15, 13, 7)]
         public void IsSumExist02_should_by_return_false(int sum, params int[] numbers)
         {
             var numbersList = new NumbersList();
@@ -53,6 +56,7 @@ namespace WyprawaNa8kPremiumTests
         [Theory]
         [InlineData(17, 10, 15, 3, 7)]
         [InlineData(18, 10, 15, 3, 7)]
+        [InlineData(-2, 10, -15, 13, 7)]
         public void IsSumExist03_should_by_return_true(int sum, params int[] numbers)
         {
             var numbersList = new NumbersList();
@@ -63,6 +67,7 @@ namespace WyprawaNa8kPremiumTests
         [Theory]
         [InlineData(19, 10, 15, 3, 7)]
         [InlineData(7, 10, 15, 3, 7)]
+        [InlineData(-3, 10, -15, 13, 7)]
 
         public void IsSumExist03_should_by_return_false(int sum, params int[] numbers)
         {
