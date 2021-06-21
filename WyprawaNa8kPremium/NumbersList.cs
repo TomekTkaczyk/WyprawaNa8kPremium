@@ -50,26 +50,25 @@ namespace WyprawaNa8kPremium
         }
 
 
-        // With LINQ preorder
-        // Work only with positive numbers :(
+        // With preorder and LINQ
 
         public bool IsSumExist03(List<int> numbers, int k)
         {
-
-            var sortedNumbers = numbers.Where(x => x <= k ).OrderBy(x => x).ToList();
-
+            numbers.Sort();
+            if (k % 2 == 0)
+            {
+                var i = numbers.IndexOf(k / 2);
+                if((i > -1) && (numbers[i] == numbers[i+1]))
+                {
+                    return true;
+                }
+            }
+            var hashSetNumbers = numbers.ToHashSet().ToList();
             for (var i = 0; i < numbers.Count - 1; i++)
             {
-                for (var j = numbers.Count - 1; j > i; j--)
+                if (numbers.Contains(k - hashSetNumbers[i]))
                 {
-                    if(numbers[i] + numbers[j] < k)
-                    {
-                        break;
-                    }
-                    else if (numbers[i] + numbers[j] == k)
-                    {
-                        return true;
-                    }
+                    return true;
                 }
             }
 
