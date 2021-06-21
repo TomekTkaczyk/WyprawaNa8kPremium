@@ -5,6 +5,7 @@ namespace WyprawaNa8kPremium
 {
     public class NumbersList
     {
+        // Brute force
         public bool IsSumExist01(List<int> numbers, int k)
         {
             numbers.Sort();
@@ -22,6 +23,7 @@ namespace WyprawaNa8kPremium
             return false;
         }
 
+        // With LINQ preorder
         public bool IsSumExist02(List<int> numbers, int k)
         {
             var sortedNumbers = numbers.Where(x => x <= k ).OrderBy(x => x).ToList();
