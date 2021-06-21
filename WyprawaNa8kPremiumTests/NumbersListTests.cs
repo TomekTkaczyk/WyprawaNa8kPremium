@@ -49,5 +49,26 @@ namespace WyprawaNa8kPremiumTests
 
             Assert.False(numbersList.IsSumExist02(new List<int>(numbers), sum));
         }
+
+        [Theory]
+        [InlineData(17, 10, 15, 3, 7)]
+        [InlineData(18, 10, 15, 3, 7)]
+        public void IsSumExist03_should_by_return_true(int sum, params int[] numbers)
+        {
+            var numbersList = new NumbersList();
+
+            Assert.True(numbersList.IsSumExist03(new List<int>(numbers), sum));
+        }
+
+        [Theory]
+        [InlineData(19, 10, 15, 3, 7)]
+        [InlineData(7, 10, 15, 3, 7)]
+
+        public void IsSumExist03_should_by_return_false(int sum, params int[] numbers)
+        {
+            var numbersList = new NumbersList();
+
+            Assert.False(numbersList.IsSumExist03(new List<int>(numbers), sum));
+        }
     }
 }
