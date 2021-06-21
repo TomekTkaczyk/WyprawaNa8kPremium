@@ -23,6 +23,7 @@ namespace WyprawaNa8kPremiumTests
         [InlineData(7, 10, 15, 3, 7)]
         public void IsSumExist01_should_by_return_false(int sum, params int[] numbers)
         {
+            sum = -20;
             var numbersList = new NumbersList();
 
             Assert.False(numbersList.IsSumExist01(new List<int>(numbers), sum));
@@ -46,7 +47,7 @@ namespace WyprawaNa8kPremiumTests
         {
             var numbersList = new NumbersList();
 
-            Assert.False(numbersList.IsSumExist01(new List<int>(numbers), sum));
+            Assert.False(numbersList.IsSumExist02(new List<int>(numbers), sum));
         }
     }
 }

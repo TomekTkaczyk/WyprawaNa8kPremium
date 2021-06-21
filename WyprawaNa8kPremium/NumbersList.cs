@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace WyprawaNa8kPremium
 {
@@ -24,8 +25,11 @@ namespace WyprawaNa8kPremium
         }
 
         // With LINQ preorder
+        // Work only with positive numbers :(
+
         public bool IsSumExist02(List<int> numbers, int k)
         {
+
             var sortedNumbers = numbers.Where(x => x <= k ).OrderBy(x => x).ToList();
 
             for (var i = 0; i < numbers.Count - 1; i++)
