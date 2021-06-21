@@ -4,8 +4,10 @@ using Xunit;
 
 namespace WyprawaNa8kPremiumTests
 {
-    public class TreeWithLeafsTests
+    public class TreeTests
     {
+
+
         [Theory]
         [InlineData(19, 6, 7, 8, 2, 7, 1, 3, 9, null, 1, 4, null, null, null, 5)]
         [InlineData(15, 1, 2, 3, 4, 5, null, 6, 7, null, null, null, null, 8)]
