@@ -17,8 +17,9 @@ namespace WyprawaNa8kPremiumTests
         public void When_arraynumbers_contains_two_numbers_whouse_sum_is_k_NumbersIsSumExist01_should_be_return_true_otherwise_false(bool expectedResult, int k, int[] numbers)
         {
             var numbersList = new NumbersList();
+            var result = numbersList.IsSumExist01(new List<int>(numbers), k);
 
-            Assert.Equal(expectedResult, numbersList.IsSumExist01(new List<int>(numbers), k));
+            Assert.Equal(expectedResult, result);
         }
 
         [Theory]
@@ -32,8 +33,9 @@ namespace WyprawaNa8kPremiumTests
         public void When_arraynumbers_contains_two_numbers_whouse_sum_is_k_NumbersIsSumExist02_should_be_return_true_otherwise_false(bool expectedResult, int k, int[] numbers)
         {
             var numbersList = new NumbersList();
+            var result = numbersList.IsSumExist02(new List<int>(numbers), k);
 
-            Assert.Equal(expectedResult, numbersList.IsSumExist02(new List<int>(numbers), k));
+            Assert.Equal(expectedResult, result);
         }
 
 
@@ -48,8 +50,9 @@ namespace WyprawaNa8kPremiumTests
         public void When_arraynumbers_contains_two_numbers_whouse_sum_is_k_NumbersIsSumExist03_should_be_return_true_otherwise_false(bool expectedResult, int k, int[] numbers)
         {
             var numbersList = new NumbersList();
+            var result = numbersList.IsSumExist03(new List<int>(numbers), k);
 
-            Assert.Equal(expectedResult, numbersList.IsSumExist03(new List<int>(numbers), k));
+            Assert.Equal(expectedResult, result);
         }
     }
 }

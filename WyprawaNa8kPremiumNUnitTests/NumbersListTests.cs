@@ -14,7 +14,7 @@ namespace TestProject1
         [Test]
         [TestCase(17, new int[] { 10, 15, 3, 7 })]
         [TestCase(18, new int[] { 10, 15, 3, 7 })]
-        public void Test1(int sum, int[] numbers)
+        public void When_arraynumbers_contains_two_numbers_whouse_sum_is_k_NumbersIsSumExist01_should_be_return_true(int sum, int[] numbers)
         {
             var numbersList = new NumbersList();
             Assert.IsTrue(numbersList.IsSumExist01(new List<int>(numbers), sum));
@@ -23,7 +23,8 @@ namespace TestProject1
         [Test]
         [TestCase(17, new int[] { 10, 15, 3, 7 }, ExpectedResult = true)]
         [TestCase(18, new int[] { 10, 15, 3, 7 }, ExpectedResult = true)]
-        public bool Test2(int sum, int[] numbers)
+        [TestCase(19, new int[] { 10, 15, 3, 7 }, ExpectedResult = false)]
+        public bool When_arraynumbers_contains_two_numbers_whouse_sum_is_k_NumbersIsSumExist03_should_be_return_true_otherwise_false(int sum, int[] numbers)
         {
             var numbersList = new NumbersList();
             return numbersList.IsSumExist01(new List<int>(numbers), sum);
