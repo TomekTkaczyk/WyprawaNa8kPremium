@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace WyprawaNa8kPremium
 {
-    public class ExcelSheet
+    public class ExcelColumnTitle
     {
         public int TitleToNumber01(string columnTitle)
         {

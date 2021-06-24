@@ -18,7 +18,7 @@ namespace WyprawaNa8kPremiumXUnitTests
         [InlineData("AAAA")]
         public void When_argument_is_not_a_Excel_column_title_should_by_throw_bad_argument_exception(string title)
         {
-            var sheet = new ExcelSheet();
+            var sheet = new ExcelColumnTitle();
 
             Assert.Throws<ArgumentException>(() => sheet.TitleToNumber01(title));
         }
@@ -32,7 +32,7 @@ namespace WyprawaNa8kPremiumXUnitTests
         [InlineData("XFD", 16384)]
         public void When_argument_is_a_Excel_column_title_should_by_return_column_number(string title, int expectedValue)
         {
-            var sheet = new ExcelSheet();
+            var sheet = new ExcelColumnTitle();
 
             Assert.Equal(expectedValue, sheet.TitleToNumber01(title));
         }
