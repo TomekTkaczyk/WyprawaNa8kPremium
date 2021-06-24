@@ -24,5 +24,30 @@ namespace WyprawaNa8kPremium
 
             return result;
         }
+
+        public int TitleToNumber02(string columnTitle)
+        {
+            if (!Regex.IsMatch(columnTitle, @"(^[A-Z]{1,2}$)|(^[A-X][A-F][A-D]$)"))
+            {
+                throw new ArgumentException();
+            }
+
+            int i = 0;
+            int result = 0;
+            foreach (char letter in ReverseString(columnTitle))
+            {
+                result += (letter - 64) * (int)Math.Pow(26, i++);
+            }
+
+            return result;
+        }
+
+        private string ReverseString(string str)
+        {
+            char[] arr = str.ToCharArray();
+            Array.Reverse(arr);
+
+            return new string(arr);
+        }
     }
 }
