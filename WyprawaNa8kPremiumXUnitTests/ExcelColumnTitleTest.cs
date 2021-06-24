@@ -15,6 +15,7 @@ namespace WyprawaNa8kPremiumXUnitTests
         [InlineData("A1")]
         [InlineData("ZZZ")]
         [InlineData("XFE")]
+        [InlineData("AAAA")]
         public void When_argument_is_not_a_Excel_column_title_should_by_throw_bad_argument_exception(string title)
         {
             var sheet = new ExcelSheet();
