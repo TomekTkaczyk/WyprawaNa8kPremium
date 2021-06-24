@@ -9,7 +9,7 @@ namespace WyprawaNa8kPremium
     {
         public int TitleToNumber01(string columnTitle)
         {
-            if(!Regex.IsMatch(columnTitle, @"^[A-Z]{1,3}$"))
+            if(!Regex.IsMatch(columnTitle, @"(^[A-Z]{1,2}$)|(^[A-X][A-F][A-D]$)"))
             {
                 throw new ArgumentException();
             }
@@ -20,12 +20,6 @@ namespace WyprawaNa8kPremium
             {
                 result += (columnTitle[i] - 64) * multipler;
                 multipler *= 26;
-            }
-
-
-            if((result < 1) || (result > 16384))
-            {
-                throw new ArgumentException();
             }
 
             return result;

@@ -7,7 +7,7 @@ using Xunit;
 
 namespace WyprawaNa8kPremiumXUnitTests
 {
-    public class ExcelColumnTitleTest
+    public class ExcelColumnTitleTests
     {
         [Theory]
         [InlineData("_")]
