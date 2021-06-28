@@ -9,7 +9,7 @@ namespace WyprawaNa8kPremium
     {
         public int TitleToNumber01(string columnTitle)
         {
-            if(!Regex.IsMatch(columnTitle, @"(^[A-Z]{1,2}$)|(^[A-X][A-F][A-D]$)"))
+            if(!Regex.IsMatch(columnTitle, @"(^[A-Z]{1,2}$)|(^[A-W][A-Z][A-Z]$)|(^X[A-E][A-Z]$)|(^XF[A-D]$)"))
             {
                 throw new ArgumentException();
             }
@@ -27,7 +27,7 @@ namespace WyprawaNa8kPremium
 
         public int TitleToNumber02(string columnTitle)
         {
-            if (!Regex.IsMatch(columnTitle, @"(^[A-Z]{1,2}$)|(^[A-X][A-F][A-D]$)"))
+            if (!Regex.IsMatch(columnTitle, @"(^[A-Z]{1,2}$)|(^[A-W][A-Z][A-Z]$)|(^X[A-E][A-Z]$)|(^XF[A-D]$)"))
             {
                 throw new ArgumentException();
             }

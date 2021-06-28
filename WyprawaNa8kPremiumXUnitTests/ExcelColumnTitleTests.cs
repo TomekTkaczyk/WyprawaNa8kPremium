@@ -28,7 +28,8 @@ namespace WyprawaNa8kPremiumXUnitTests
         [InlineData("Z", 26)]
         [InlineData("AA", 27)]
         [InlineData("ZZ", 702)]
-        [InlineData("ABC", 703)]
+        [InlineData("ABC", 731)]
+        [InlineData("AZZ", 1378)]
         [InlineData("XFD", 16384)]
         public void When_argument_is_a_Excel_column_title_TitleToNumber01_should_by_return_column_number(string title, int expectedValue)
         {
@@ -56,7 +57,8 @@ namespace WyprawaNa8kPremiumXUnitTests
         [InlineData("Z", 26)]
         [InlineData("AA", 27)]
         [InlineData("ZZ", 702)]
-        [InlineData("ABC", 703)]
+        [InlineData("ABC", 731)]
+        [InlineData("AZZ", 1378)]
         [InlineData("XFD", 16384)]
         public void When_argument_is_a_Excel_column_title_TitleToNumber02_should_by_return_column_number(string title, int expectedValue)
         {
