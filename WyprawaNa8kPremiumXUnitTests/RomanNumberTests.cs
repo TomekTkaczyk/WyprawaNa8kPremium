@@ -1,5 +1,4 @@
-﻿using System;
-using WyprawaNa8kPremium;
+﻿using WyprawaNa8kPremium;
 using Xunit;
 
 namespace WyprawaNa8kPremiumXUnitTests
@@ -35,6 +34,8 @@ namespace WyprawaNa8kPremiumXUnitTests
         [InlineData(1956, "MCMLVI")]
         [InlineData(2011, "MMXI")]
         [InlineData(3888, "MMMDCCCLXXXVIII")]
+        [InlineData(49, "IL")]
+        [InlineData(49, "XLIX")]
         public void ToInt_should_by_return_expected_value(int expected, string romanNumber)
         {
             var rn = new RomanNumber(romanNumber);

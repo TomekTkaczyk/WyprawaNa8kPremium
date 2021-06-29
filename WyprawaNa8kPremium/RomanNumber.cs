@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace WyprawaNa8kPremium
 {
@@ -22,17 +23,6 @@ namespace WyprawaNa8kPremium
         public RomanNumber(string romanNumber)
         {
             _romanNumber = romanNumber;
-            validate();
-        }
-
-        private void validate()
-        {
-            var hash = _romanNumber.ToHashSet();
-            
-            if(hash.Where(x => !dictNumbers.ContainsKey(x)).ToList().Count != 0)
-            {
-                throw new ArgumentException("Invalid RomanNumber");
-            }
         }
 
         public string Value 
