@@ -34,7 +34,6 @@ namespace WyprawaNa8kPremiumXUnitTests
         [InlineData(1956, "MCMLVI")]
         [InlineData(2011, "MMXI")]
         [InlineData(3888, "MMMDCCCLXXXVIII")]
-        [InlineData(49, "IL")]
         [InlineData(49, "XLIX")]
         public void ToInt_should_by_return_expected_value(int expected, string romanNumber)
         {

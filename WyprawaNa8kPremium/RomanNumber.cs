@@ -25,15 +25,28 @@ namespace WyprawaNa8kPremium
             _romanNumber = romanNumber;
         }
 
-        public string Value 
-        { 
-            get 
-            { 
-                return _romanNumber; 
-            } 
+        public string Value
+        {
+            get
+            {
+                return _romanNumber;
+            }
+        }
+
+        public bool IsValid
+        {
+            get
+            {
+                return String.Equals(Value, toInt().ToRoman());
+            }
         }
 
         public int ToInt()
+        {
+            return toInt();
+        }
+
+        private int toInt()
         {
             int result = 0;
 

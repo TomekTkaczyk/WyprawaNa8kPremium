@@ -15,7 +15,20 @@ namespace WyprawaNa8kPremium
                 !Regex.IsMatch(input, @"V{2,}|L{2,}|D{2,}") &&
                 !Regex.IsMatch(input, @"V[XLCDM]|L[CDM]|DM") &&
                 !Regex.IsMatch(input, @"II[VXLCDM]|XX[LCDM]|CC[DM]") &&
-                !Regex.IsMatch(input, @"I[LCDM]");
+                !Regex.IsMatch(input, @"I[LCDM]") &&
+                !Regex.IsMatch(input, @"X[DM]");
+        }
+
+        public bool Validate1(string input)
+        {
+            if(!Regex.IsMatch(input, @"^[IVXLCDM]*$"))
+            {
+                return false;
+            }
+
+            var rn = new RomanNumber(input);
+
+            return String.Equals(input, rn.ToInt().ToRoman());
         }
     }
 }
