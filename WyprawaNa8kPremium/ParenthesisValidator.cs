@@ -25,7 +25,14 @@ namespace WyprawaNa8kPremium
                 }
                 else if(ParenthesisPairs.ContainsKey(item))
                 {
-                    if (stack.Count == 0 || !stack.Pop().Equals(ParenthesisPairs[item]))
+                    try
+                    {
+                        if (!stack.Pop().Equals(ParenthesisPairs[item]))
+                        {
+                            return false;
+                        }
+                    }
+                    catch (InvalidOperationException)
                     {
                         return false;
                     }

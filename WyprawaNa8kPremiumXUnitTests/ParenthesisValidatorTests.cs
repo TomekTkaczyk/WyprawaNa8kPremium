@@ -24,6 +24,7 @@ namespace WyprawaNa8kPremiumXUnitTests
         [InlineData("([{})]")]
         [InlineData("a=(b+c)*{d+e/(f+g)]")]
         [InlineData("a=(b+c)*(d+e/[f+g))")]
+        [InlineData("a=(b+c)*(d+e/[f+g)]")]
         public void When_parentheses_pairs_have_invalid_order_then_return_false(string s)
         {
             var pv = new ParenthesisValidator();
