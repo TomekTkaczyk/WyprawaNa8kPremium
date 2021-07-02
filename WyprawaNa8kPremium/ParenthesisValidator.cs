@@ -4,12 +4,12 @@ using System.Text;
 
 namespace WyprawaNa8kPremium
 {
-    public class ParenthesisValidator
+    public class ParenthesesValidator
     {
 
         public bool IsValid(string s)
         {
-            Dictionary<char, char> ParenthesisPairs = new Dictionary<char, char>()
+            Dictionary<char, char> ParenthesesPairs = new Dictionary<char, char>()
             {
                 { ')','(' },
                 { '}','{' },
@@ -19,15 +19,15 @@ namespace WyprawaNa8kPremium
 
             foreach(var item in s)
             {
-                if (ParenthesisPairs.ContainsValue(item))
+                if (ParenthesesPairs.ContainsValue(item))
                 {
                     stack.Push(item);
                 }
-                else if(ParenthesisPairs.ContainsKey(item))
+                else if(ParenthesesPairs.ContainsKey(item))
                 {
                     try
                     {
-                        if (!stack.Pop().Equals(ParenthesisPairs[item]))
+                        if (!stack.Pop().Equals(ParenthesesPairs[item]))
                         {
                             return false;
                         }
