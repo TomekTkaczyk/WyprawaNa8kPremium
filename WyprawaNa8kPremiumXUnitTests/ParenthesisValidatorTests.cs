@@ -22,6 +22,7 @@ namespace WyprawaNa8kPremiumXUnitTests
 
         [Theory]
         [InlineData("([{})]")]
+        [InlineData("))((")]
         [InlineData("a=(b+c)*{d+e/(f+g)]")]
         [InlineData("a=(b+c)*(d+e/[f+g))")]
         [InlineData("a=(b+c)*(d+e/[f+g)]")]
