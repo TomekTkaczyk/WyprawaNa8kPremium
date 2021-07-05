@@ -39,6 +39,34 @@ namespace WyprawaNa8kPremium
             return Fibo(n);
         }
 
+        // Drzewo binarne z ograniczeniem poziomu zagłębienia
+        public int ClimbStairs03(int n, int stepsCount)
+        {
+            var result = 0;
+            int level = 0;
 
+            AddStep(1);
+            AddStep(2);
+
+            void AddStep(int steps)
+            {
+                level++;
+                if (steps < n)
+                {
+                    AddStep(steps + 1);
+                    AddStep(steps + 2);
+                }
+                else if (steps == n)
+                {
+                    if (level == stepsCount)
+                    {
+                        result++;
+                    }
+                }
+                level--;
+            }
+
+            return result;
+        }
     }
 }

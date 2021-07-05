@@ -32,5 +32,19 @@ namespace WyprawaNa8kPremiumXUnitTests
 
             Assert.Equal(expectedWays, stairs.ClimbStairs02(stepsCount));
         }
+
+        [Theory]
+        [InlineData(1, 1, 1)]
+        [InlineData(1, 2, 1)]
+        [InlineData(2, 3, 2)]
+        [InlineData(0, 3, 1)]
+        [InlineData(1, 3, 3)]
+        [InlineData(3, 4, 3)]
+        public void ClimbStairs03_return_expected_various_ways(int expectedWays, int stepsCount, int movesCount)
+        {
+            var stairs = new Stairs();
+
+            Assert.Equal(expectedWays, stairs.ClimbStairs03(stepsCount, movesCount));
+        }
     }
 }
