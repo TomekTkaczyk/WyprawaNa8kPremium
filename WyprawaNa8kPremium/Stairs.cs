@@ -58,7 +58,7 @@ namespace WyprawaNa8kPremium
                 }
                 else if (steps == n)
                 {
-                    if (level == stepsCount)
+                    if (level <= stepsCount)
                     {
                         result++;
                     }
