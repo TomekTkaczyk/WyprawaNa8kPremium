@@ -73,16 +73,18 @@ namespace WyprawaNa8kPremium
         {
             static int Fibo2(int f)
             {
-                int[] fibo_ = { 1, 1 }; 
+                int fibo0 = 1; 
+                int fibo1 = 1;
+                int tmp;
 
-                for(var i = 2; i < f + 1; i++)
+                for (var i = 2; i < f + 1; i++)
                 {
-                    var tmp = fibo_[0];
-                    fibo_[0] = fibo_[1];
-                    fibo_[1] = tmp + fibo_[0];
+                    tmp = fibo0;
+                    fibo0 = fibo1;
+                    fibo1 = tmp + fibo0;
                 }
 
-                return fibo_[1];
+                return fibo1;
             }
 
             return Fibo2(n);
