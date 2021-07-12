@@ -68,5 +68,24 @@ namespace WyprawaNa8kPremium
 
             return result;
         }
+
+        public int ClimbStairs04(int n)
+        {
+            static int Fibo2(int f)
+            {
+                int[] fibo_ = { 1, 1 }; 
+
+                for(var i = 2; i < f + 1; i++)
+                {
+                    var tmp = fibo_[0];
+                    fibo_[0] = fibo_[1];
+                    fibo_[1] = tmp + fibo_[0];
+                }
+
+                return fibo_[1];
+            }
+
+            return Fibo2(n);
+        }
     }
 }
