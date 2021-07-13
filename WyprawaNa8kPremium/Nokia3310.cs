@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace WyprawaNa8kPremium
 {
@@ -26,22 +25,22 @@ namespace WyprawaNa8kPremium
             {
                 var result = new List<string>();
 
-                if(digits.Length > 0)
+                if(digits.Length == 1)
+                {
+                    foreach(var letter in letters[digits[0]])
+                    {
+                        result.Add(letter.ToString());
+                    }
+                }
+
+                if(digits.Length > 1)
                 {
                     var temp = AddLetters(digits[1..]);
-                    for (var j = 0; j < letters[digits[0]].Length; j++)
+                    foreach(var letter in letters[digits[0]])
                     {
-                        var letter = letters[digits[0]][j];
-                        if (temp.Count == 0)
+                        foreach(var item in temp)
                         {
-                            result.Add(letters[digits[0]][j].ToString());
-                        }
-                        else
-                        {
-                            for (var i = 0; i < temp.Count; i++)
-                            {
-                                result.Add(letters[digits[0]][j] + temp[i]);
-                            }
+                            result.Add(letter + item);
                         }
                     }
                 }

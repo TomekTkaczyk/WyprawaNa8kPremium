@@ -3,7 +3,7 @@ using System.Text;
 using WyprawaNa8kPremium;
 using Xunit;
 
-namespace WyprawaNa8kPremiumTests
+namespace WyprawaNa8kPremiumXUnitTests
 {
     public class PangramTests
     {
