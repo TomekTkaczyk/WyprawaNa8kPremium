@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace WyprawaNa8kPremium
 {
-    public class Train
+    public class Substring
     {
         public int LengthOfLongestSubstring(string s)
         {

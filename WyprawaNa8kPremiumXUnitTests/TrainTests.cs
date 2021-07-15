@@ -17,7 +17,7 @@ namespace WyprawaNa8kPremiumXUnitTests
         [InlineData(0, "")]
         public void LengthOfLongestSubstring_should_by_return_expected_value(int expected, string s)
         {
-            var train = new Train();
+            var train = new Substring();
 
             Assert.Equal(expected, train.LengthOfLongestSubstring(s));
         }
@@ -25,7 +25,7 @@ namespace WyprawaNa8kPremiumXUnitTests
         [Fact]
         public void When_argument_is_out_of_valid_data_LengthOfLongestSubstring_should_by_return_ArgumentEception()
         {
-            var train = new Train();
+            var train = new Substring();
 
             Assert.Throws<ArgumentException>(() => train.LengthOfLongestSubstring("ą"));
         }
@@ -33,7 +33,7 @@ namespace WyprawaNa8kPremiumXUnitTests
         [Fact]
         public void When_argument_is_all_alphabet_LengthOfLongestSubstring_should_by_return_96()
         {
-            var train = new Train();
+            var train = new Substring();
             var s = string.Empty;
             for(var i = 32; i < 128; i++)
             {
