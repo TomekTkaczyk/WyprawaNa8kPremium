@@ -51,7 +51,7 @@ namespace WyprawaNa8kPremium
                 return 1;
             }
 
-            var maxString = new StringBuilder();
+            var maxString = "";
             int head = 0;
             int tail = 0;
 
@@ -61,8 +61,7 @@ namespace WyprawaNa8kPremium
                 {
                     if (head - tail > maxString.Length)
                     {
-                        maxString.Clear();
-                        maxString.Append(s[tail..head]);
+                        maxString = s[tail..head];
                     }
                     tail += s[tail..head].IndexOf(s[head]) + 1;
                 }
@@ -76,8 +75,7 @@ namespace WyprawaNa8kPremium
                 head++;
                 if(head - tail > maxString.Length)
                 {
-                    maxString.Clear();
-                    maxString.Append(s[tail..head]);
+                    maxString = s[tail..head];
                 }
             }
 
